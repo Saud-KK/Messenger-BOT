@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Bot Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f9; }
+        .container { max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input, textarea, button { width: 100%; margin-bottom: 15px; padding: 10px; box-sizing: border-box; }
+        button { background-color: #5865F2; color: white; border: none; cursor: pointer; border-radius: 4px; }
+        button:hover { background-color: #4752C4; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Send a Discord DM</h2>
+        <form action="/send_dm" method="POST">
+            <label for="user_id">Discord User ID:</label>
+            <input type="text" id="user_id" name="user_id" required placeholder="e.g., 123456789012345678">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Type your message here..."></textarea>
+
+            <button type="submit">Send DM</button>
+        </form>
+    </div>
+</body>
+</html>
